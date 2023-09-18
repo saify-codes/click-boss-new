@@ -2,19 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Metadata } from "next";
 import { SignInResponse, signIn, useSession } from 'next-auth/react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import { useRouter } from 'next/navigation';
 import { useLayoutEffect, useState } from 'react';
 
-
-
-export const metadata: Metadata = {
-  title: "Signin Page | Next.js E-commerce Dashboard Template",
-  description: "This is Signin page for TailAdmin Next.js",
-  // other metadata
-};
 
 const SignIn: React.FC = () => {
   const router = useRouter()

@@ -3,15 +3,9 @@ import React, { useLayoutEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
-import { Metadata } from "next";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
-export const metadata: Metadata = {
-  title: "Signup Page | Next.js E-commerce Dashboard Template",
-  description: "This is Signup page for TailAdmin Next.js",
-  // other metadata
-};
 
 const SignUp: React.FC = () => {
 
