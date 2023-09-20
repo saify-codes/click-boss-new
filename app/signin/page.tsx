@@ -18,6 +18,8 @@ const SignIn: React.FC = () => {
     const response: SignInResponse | undefined = await signIn('credentials', { redirect: false, ...data })
     if (response?.error) {
       setError(true)
+    }else{
+      router.push('/')
     }
 
   }

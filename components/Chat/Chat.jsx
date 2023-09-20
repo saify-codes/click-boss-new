@@ -15,7 +15,7 @@ export default function ChatMessage({ user, msg }) {
         <div className="avatar w-8 h-8 shrink-0">
             <img src={image}/>
         </div>
-        <div className="content text-sm whitespace-pre-wrap">
+        <div className="content text-black font-normal leading-6 whitespace-pre-wrap">
             {msg}
         </div>
     </div>

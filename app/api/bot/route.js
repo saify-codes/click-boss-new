@@ -11,7 +11,7 @@ const chain = new ConversationChain({ llm, memory })
 
 
 
-export async function GET(req, res) {
+export async function GET() {
     const response = await axios.get('https://connectors.windsor.ai/all?api_key=b74de8fd07e5f578dd467d232457a57fd187&date_from=2023-09-1&date_to=2023-09-14&fields=account_name,campaign,clicks,date,spend')
     const windsorData = response.data
     let data = ""
@@ -20,7 +20,7 @@ export async function GET(req, res) {
             data += `account_name: '${i.account_name}', campaign: '${i.campaign}', clicks: '${i.clicks}', date: '${i.date}', spend: '${i.spend}'\n`;
     }
     await memory.clear()
-    await memory.saveContext({ input: data }, { output: "windsor data" });
+    await memory.saveContext({ input: data }, { output: "..." });
     return NextResponse.json({ msg: 'data fetching successful' })
 }
 

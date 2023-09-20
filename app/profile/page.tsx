@@ -72,7 +72,7 @@ const Profile = () => {
                 alt="profile"
                 className="rounded-full"
               />
-              <label
+              {/* <label
                 htmlFor="profile"
                 className="absolute bottom-0 right-0 flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2"
               >
@@ -103,7 +103,7 @@ const Profile = () => {
                   id="profile"
                   className="sr-only"
                 />
-              </label>
+              </label> */}
             </div>
             <div className="mt-4">
               <div>

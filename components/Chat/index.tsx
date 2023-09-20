@@ -4,6 +4,7 @@ import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { ThreeDots } from 'react-loader-spinner'
 import Chat from './Chat'
 import axios from "axios";
+import ChatSuggestion from './ChatSuggestion'
 
 export default function Index() {
 
@@ -82,14 +83,15 @@ export default function Index() {
         </div>}
 
       <div className="chat-container h-[80vh] flex flex-col border border-body rounded-md overflow-hidden">
-        <div className="chat-message-container grow overflow-auto" ref={chatArea}>
+        <div className="relative chat-message-container grow overflow-auto" ref={chatArea}>
           {chats.map((chat: any) => <Chat user={chat.user} msg={chat.msg} key={chat.id} />)}
+          {/* {chats.length === 0 && <ChatSuggestion ref={prompt}/>} */}
         </div>
         <form className="flex border rounded-lg m-4 py-3 px-2" onSubmit={submit}>
           <input
             ref={prompt}
             type="text"
-            className="grow border-none text-sm outline-none"
+            className="grow bg-transparent border-none text-sm outline-none"
             placeholder="Ask me anything"
           />
           <button>

@@ -1,4 +1,5 @@
 import ECommerce from "@/components/Dashboard/E-commerce";
+import Chat from "@/components/Chat";
 import { Metadata } from "next";
 import BaseLayout from '@/layouts/base'
 
@@ -12,7 +13,8 @@ export default function Home() {
   return (
     <>
     <BaseLayout>
-      <ECommerce />
+      {/* <ECommerce /> */}
+      <Chat/>
     </BaseLayout>
     </>
   );
